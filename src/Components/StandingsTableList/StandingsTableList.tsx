@@ -24,19 +24,9 @@ export interface IStandingsTableListState {
 export interface IStandingsTableListProps {
   standings: IStandingsTableListItem[];
 }
-export class StandingsTableList extends React.Component<
-  IStandingsTableListProps,
-  IStandingsTableListState
-> {
-  private _columns: IColumn[];
-
-  constructor(props: IStandingsTableListProps) {
-    super(props);
-    this._columns = standingsTableListColumns;
-  }
-
-  public render(): JSX.Element {
-    const standings = this.props.standings;
-    return <DetailsList items={standings} columns={this._columns} />;
-  }
-}
+export const StandingsTableList: React.FunctionComponent<
+  IStandingsTableListProps
+> = (props: IStandingsTableListProps) => {
+  const standings = props.standings;
+  return <DetailsList items={standings} columns={standingsTableListColumns} />;
+};
