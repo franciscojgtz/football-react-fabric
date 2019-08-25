@@ -27,9 +27,10 @@ export class StandingsTableList extends React.Component<
   IStandingsTableListProps,
   IStandingsTableListState
 > {
+  private _leagueID: number;
   constructor(props: IStandingsTableListProps) {
     super(props);
-
+    this._leagueID = this.props.leagueId;
     this.state = {
       items: []
     };
@@ -47,7 +48,7 @@ export class StandingsTableList extends React.Component<
   }
 
   async componentDidMount() {
-    const response = await this.getItems(2014).then(items => items);
+    const response = await this.getItems(this._leagueID).then(items => items);
     let items: IStandingsTableListItem[] = [];
     const standingsTable =
       (response.standings &&
