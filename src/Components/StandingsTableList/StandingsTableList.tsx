@@ -1,5 +1,6 @@
 import React from "react";
-import { DetailsList } from "office-ui-fabric-react";
+import { DetailsList, IColumn } from "office-ui-fabric-react";
+import { standingsTableListColumns } from "./StandingsTableListColumns";
 
 export interface IStandingsTableListItem {
   key: number;
@@ -28,9 +29,12 @@ export class StandingsTableList extends React.Component<
   IStandingsTableListState
 > {
   private _leagueID: number;
+  private _columns: IColumn[];
+
   constructor(props: IStandingsTableListProps) {
     super(props);
     this._leagueID = this.props.leagueId;
+    this._columns = standingsTableListColumns;
     this.state = {
       items: []
     };
@@ -79,6 +83,6 @@ export class StandingsTableList extends React.Component<
 
   public render(): JSX.Element {
     const { items } = this.state;
-    return <DetailsList items={items} />;
+    return <DetailsList items={items} columns={this._columns} />;
   }
 }

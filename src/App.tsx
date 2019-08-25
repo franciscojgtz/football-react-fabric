@@ -5,7 +5,7 @@ import { StandingsTableList } from "./Components/StandingsTableList/StandingsTab
 export const App: React.FunctionComponent = () => {
   return (
     <Fabric>
-      <StandingsTableList leagueId={3} />
+      <StandingsTableList leagueId={2019} />
     </Fabric>
   );
 };
