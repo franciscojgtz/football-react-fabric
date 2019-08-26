@@ -1,5 +1,10 @@
 import { IStandingsTableListItem } from "../Components/StandingsTableList/StandingsTableList";
 
+export interface IStandingsLeague {
+  team: IStandingsTableListItem[];
+  leagueName: string;
+}
+
 export async function getStandingsFromAPI(leagueID: number): Promise<any> {
   const response = await fetch(
     `http://api.football-data.org/v2/competitions/${leagueID}/standings`,
@@ -13,7 +18,7 @@ export async function getStandingsFromAPI(leagueID: number): Promise<any> {
 
 export async function getStandingsData(
   leagueID: number
-): Promise<IStandingsTableListItem[]> {
+): Promise<IStandingsLeague> {
   const response = await getStandingsFromAPI(leagueID).then(items => items);
   let items: IStandingsTableListItem[] = [];
   const standingsTable =
@@ -39,5 +44,12 @@ export async function getStandingsData(
 
     items.push(item);
   }
-  return items;
+
+  const leagueName =
+    (response && response.competition && response.competition.name) || "";
+  const league: IStandingsLeague = {
+    team: items,
+    leagueName
+  };
+  return league;
 }
