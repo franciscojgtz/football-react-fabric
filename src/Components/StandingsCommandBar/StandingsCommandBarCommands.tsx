@@ -1,5 +1,3 @@
-import React from "react";
-import { IStandingsCommandBar } from "./StandingsCommandBar";
 import { ICommandBarItemProps } from "office-ui-fabric-react/lib/components/CommandBar";
 
 export function getStandingsCommandBarCommands(

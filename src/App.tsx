@@ -6,6 +6,7 @@ import {
 } from "./Components/StandingsTableList/StandingsTableList";
 import { getStandingsData } from "./API/standings";
 import { StandingsCommandBar } from "./Components/StandingsCommandBar/StandingsCommandBar";
+import "./App.css";
 
 export interface IAppProps {}
 
@@ -44,9 +45,11 @@ export class App extends React.Component<IAppProps, IAppState> {
   render() {
     return (
       <Fabric>
-        <StandingsCommandBar updateStandings={this.updateStandings} />
-        <Breadcrumb items={[{ key: "test", text: this.state.leagueName }]} />
-        <StandingsTableList standings={this.state.standings} />
+        <div className="app-container">
+          <StandingsCommandBar updateStandings={this.updateStandings} />
+          <Breadcrumb items={[{ key: "test", text: this.state.leagueName }]} />
+          <StandingsTableList standings={this.state.standings} />
+        </div>
       </Fabric>
     );
   }
