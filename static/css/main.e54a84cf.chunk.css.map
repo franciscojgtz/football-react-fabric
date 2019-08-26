@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACE,wBACF,CAEA,eACE,gBAAiB,CACjB,aACF","file":"main.e54a84cf.chunk.css","sourcesContent":["body {\r\n  background-color: #f3f2f1;\r\n}\r\n\r\n.app-container {\r\n  max-width: 1024px;\r\n  margin: 0 auto;\r\n}\r\n"]}

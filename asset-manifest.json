@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/football-react-fabric/static/css/main.e54a84cf.chunk.css",
+    "main.js": "/football-react-fabric/static/js/main.89c8afa3.chunk.js",
+    "main.js.map": "/football-react-fabric/static/js/main.89c8afa3.chunk.js.map",
+    "runtime~main.js": "/football-react-fabric/static/js/runtime~main.810825b5.js",
+    "runtime~main.js.map": "/football-react-fabric/static/js/runtime~main.810825b5.js.map",
+    "static/js/2.e90c337f.chunk.js": "/football-react-fabric/static/js/2.e90c337f.chunk.js",
+    "static/js/2.e90c337f.chunk.js.map": "/football-react-fabric/static/js/2.e90c337f.chunk.js.map",
+    "index.html": "/football-react-fabric/index.html",
+    "precache-manifest.635452377d49971562b671b6fb516127.js": "/football-react-fabric/precache-manifest.635452377d49971562b671b6fb516127.js",
+    "service-worker.js": "/football-react-fabric/service-worker.js",
+    "static/css/main.e54a84cf.chunk.css.map": "/football-react-fabric/static/css/main.e54a84cf.chunk.css.map"
+  }
+}
