@@ -2,12 +2,17 @@ import React from "react";
 import { IStandingsTableListItem } from "./StandingsTableList";
 import { IColumn } from "office-ui-fabric-react";
 
+function addDefaultSrc(ev: any) {
+  ev.target.src =
+    "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg";
+}
+
 export const standingsTableListColumns: IColumn[] = [
   {
     key: "positionColumn",
     name: "Pos",
     fieldName: "position",
-    minWidth: 20,
+    minWidth: 10,
     maxWidth: 50,
     isResizable: true
   },
@@ -18,7 +23,14 @@ export const standingsTableListColumns: IColumn[] = [
     maxWidth: 50,
     isResizable: true,
     onRender: (item: IStandingsTableListItem) => {
-      return <img width="20" height="20" src={item.crestUrl} />;
+      return (
+        <img
+          width="20"
+          height="20"
+          src={item.crestUrl}
+          onError={addDefaultSrc}
+        />
+      );
     }
   },
   {
