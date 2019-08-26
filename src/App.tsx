@@ -19,7 +19,7 @@ export class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props);
     this.state = {
-      leagueID: 0,
+      leagueID: 2014,
       leagueName: "",
       standings: []
     };

@@ -54,6 +54,13 @@ export function getStandingsCommandBarCommands(
       onClick: () => {
         updateStandings(2017);
       }
+    },
+    {
+      key: "ItalyCommand",
+      text: "Italy",
+      onClick: () => {
+        updateStandings(2019);
+      }
     }
   ];
 }
