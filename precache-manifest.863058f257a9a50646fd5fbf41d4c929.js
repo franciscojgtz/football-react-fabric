@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7d8fd2fab931190e2cb278bb8037c239",
+    "revision": "926794e1bdf686603c6e1e925c6e84dc",
     "url": "/football-react-fabric/index.html"
   },
   {
-    "revision": "bcb6f22fb9f6cd29b849",
+    "revision": "f005fbae8e725d7fa01d",
     "url": "/football-react-fabric/static/css/main.e54a84cf.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/football-react-fabric/static/js/2.e90c337f.chunk.js"
   },
   {
-    "revision": "bcb6f22fb9f6cd29b849",
-    "url": "/football-react-fabric/static/js/main.89c8afa3.chunk.js"
+    "revision": "f005fbae8e725d7fa01d",
+    "url": "/football-react-fabric/static/js/main.0370ed93.chunk.js"
   },
   {
     "revision": "10748363c5d29bf81dd6",
