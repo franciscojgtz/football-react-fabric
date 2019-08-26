@@ -5,6 +5,7 @@ import {
   IStandingsTableListItem
 } from "./Components/StandingsTableList/StandingsTableList";
 import { getStandingsData } from "./API/standings";
+import { StandingsCommandBar } from "./Components/StandingsCommandBar/StandingsCommandBar";
 
 export interface IAppProps {}
 
@@ -27,15 +28,15 @@ export class App extends React.Component<IAppProps, IAppState> {
     this.setState({ standings });
   }
 
-  private async updateS() {
-    const standings = await getStandingsData(2014).then(e => e);
-    this.setState({ leagueID: 2014, standings });
-  }
+  private updateStandings = async (leagueID: number) => {
+    const standings = await getStandingsData(leagueID).then(e => e);
+    this.setState({ leagueID, standings });
+  };
 
   render() {
     return (
       <Fabric>
-        <button onClick={() => this.updateS()}>button</button>
+        <StandingsCommandBar updateStandings={this.updateStandings} />
         <StandingsTableList standings={this.state.standings} />
       </Fabric>
     );
