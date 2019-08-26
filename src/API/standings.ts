@@ -7,7 +7,7 @@ export interface IStandingsLeague {
 
 export async function getStandingsFromAPI(leagueID: number): Promise<any> {
   const response = await fetch(
-    `http://api.football-data.org/v2/competitions/${leagueID}/standings`,
+    `https://api.football-data.org/v2/competitions/${leagueID}/standings`,
     {
       headers: { "X-Auth-Token": "06ce053959a04bb8adf57acba0586981" }
     }
