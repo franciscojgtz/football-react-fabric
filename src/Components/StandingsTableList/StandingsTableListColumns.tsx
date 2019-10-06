@@ -2,8 +2,8 @@ import React from "react";
 import { IStandingsTableListItem } from "./StandingsTableList";
 import { IColumn } from "office-ui-fabric-react";
 
-function addDefaultSrc(ev: any) {
-  ev.target.src =
+function addDefaultSrc(ev: React.SyntheticEvent<HTMLImageElement, Event>) {
+  ev.currentTarget.src =
     "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg";
 }
 
